@@ -4,7 +4,7 @@ pipeline {
         stage("Run Command"){
             steps {
                 sh '''
-                sudo yum install wget httpd -y
+                sudo yum install wget unzip httpd -y
                 ping -c 4 google.com
                 '''
             }
@@ -14,6 +14,7 @@ pipeline {
                 ws("tmp/"){
                     sh "pwd"
                     sh "https://releases.hashicorp.com/terraform/0.12.17/terraform_0.12.17_linux_amd64.zip"
+                    sh "unzip terraform_0.12.17_linux_amd64.zip"
                 }
             }
         }
