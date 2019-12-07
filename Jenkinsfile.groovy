@@ -4,9 +4,6 @@ pipeline {
         stage("Run Command"){
             steps {
                 sh '''
-                set +xe
-                echo Hello
-                ech Error
                 sudo yum install wget httpd -y
                 ping -c 4 google.com
                 '''
