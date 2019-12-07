@@ -3,7 +3,13 @@ pipeline {
     stages{
         stage("Run Command"){
             steps {
-                sh "echo Hello"
+                sh '''
+                set +xe
+                echo Hello
+                ech Error
+                sudo yum install httpd -y
+                ping -c 4 google.com
+                '''
             }
         }
     }
