@@ -23,6 +23,8 @@ pipeline {
                             sh "unzip -o terraform_0.12.17_linux_amd64.zip"
                             sh "sudo mv -f terraform /bin"
                             sh "terraform version"
+                        }
+                    }
                 }
             }
         }
