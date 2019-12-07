@@ -14,7 +14,7 @@ pipeline {
         }
         stage("Download Terraform"){
             steps{
-                ws("/tmp"){
+                ws("tmp/"){
                     sh "pwd"
                 }
             }
