@@ -47,5 +47,11 @@ pipeline {
                 }
             }
         }
+        stage("Pullrepo"){
+            steps{
+                git("https://github.com/rootvovak/test1.git")
+                sh "ls"
+            }
+        }
     }
 }
